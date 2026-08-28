@@ -1,0 +1,6 @@
+# Declared by qcom sepolicy-legacy (legacy/vendor) on devices that build the
+# vendor hierarchy; declared here since the legacy vendr tree is not compiled.
+type netmgrd, domain;
+
+# Removed dac_override - violates platform neverallow in system/sepolicy/private/domain.te
+# allow netmgrd self:capability dac_override;
