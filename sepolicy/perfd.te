@@ -1,1 +1,16 @@
 allow perfd proc_kernel_sched:file { open read write };
+
+# Declared by qcom sepolicy_vndr (hal_perf_default domain) on devices that build
+# the vendor hierarchy; declared here since qcom/vendor rules reference it.
+type vendor_hal_perf_default, domain;
+
+# Declared by qcom sepolicy-legacy (legacy/vendor) on devices that build the
+# vendor hierarchy; declared here since the legacy vendr tree is not compiled.
+type perfd, domain;
+
+# Declared by qcom sepolicy-legacy (legacy/vendor) on devices that build the
+# vendor hierarchy; declared here since the legacy vendr tree is not compiled.
+type ims, domain;
+
+# Declared by older API prebuilts; not in current public sepolicy.
+type perfprofd, domain;

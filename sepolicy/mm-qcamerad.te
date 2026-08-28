@@ -1,3 +1,7 @@
+# Declared by qcom sepolicy-legacy (legacy/vendor) on devices that build the
+# vendor hierarchy; declared here since the legacy vendr tree is not compiled.
+type mm-qcamerad, domain;
+
 allow mm-qcamerad camera_data_file:dir r_dir_perms;
 allow mm-qcamerad mpctl_socket:dir search;
 unix_socket_connect(mm-qcamerad, mpctl, perfd)

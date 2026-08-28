@@ -1,1 +1,5 @@
+# Declared by qcom sepolicy-legacy (legacy/vendor) on devices that build the
+# vendor hierarchy; declared here since the legacy vendr tree is not compiled.
+type rmt_storage, domain;
+
 allow rmt_storage self:capability net_raw;

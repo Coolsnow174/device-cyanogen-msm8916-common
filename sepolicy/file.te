@@ -1,1 +1,19 @@
 type proc_kernel_sched, fs_type;
+
+# Declared by qcom sepolicy_vndr on devices that build the vendor hierarchy;
+# this device merges vendor into /system so the type is declared here instead.
+type vendor_qdisplay_service, vndservice_manager_type;
+type vendor_sysfs_graphics, sysfs_type, fs_type;
+type vendor_persist_block_device, dev_type;
+type vendor_sysfs_battery_supply, sysfs_type, fs_type;
+type vendor_sysfs_usb_supply, sysfs_type, fs_type;
+type vendor_display_vendor_data_file, file_type, data_file_type;
+type mpctl_socket, file_type, mlstrustedobject;
+type vendor_time_data_file, file_type, data_file_type;
+type persist_file, file_type, vendor_persist_type;
+type pps_socket, file_type;
+type mm-pp-daemon, domain;
+type firmware_file, file_type, contextmount_type, vendor_file_type;
+type vendor_hal_keymaster_qti_exec, exec_type, vendor_file_type, file_type;
+type qti_init_shell_exec, exec_type, vendor_file_type, file_type;
+type time_daemon_exec, exec_type, vendor_file_type, file_type;

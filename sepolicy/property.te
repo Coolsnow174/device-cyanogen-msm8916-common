@@ -1,1 +1,5 @@
 type vendor_timekeep_prop, property_type;
+
+# Declared by qcom sepolicy_vndr on devices that build the vendor hierarchy;
+# this device merges vendor into /system so the type is declared here instead.
+vendor_restricted_prop(vendor_display_prop);
